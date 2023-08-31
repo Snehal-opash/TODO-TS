@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   Container,
   TextField,
@@ -33,7 +33,7 @@ const App = () => {
     id: TodoItemType["id"],
     newTitle: TodoItemType["title"]
   ): void => {
-    console.log("Edit handler called with new title:", newTitle)
+    console.log("Edit handler called with new title:", newTitle);
     const newTodos: TodoItemType[] = todos.map((i) => {
       if (i.id === id) i.title = newTitle;
       return i;
